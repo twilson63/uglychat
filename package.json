@@ -1,0 +1,27 @@
+{
+  "name": "bacn",
+  "version": "0.0.0",
+  "scripts": {
+    "watch-js": "watchify -t brfs app/app.js -o public/bundle.js -dv",
+    "watch": "npm run watch-js",
+    "start": "cd public && w3",
+    "start-dev": "npm run watch & npm start",
+    "install": "napa"
+  },
+  "devDependencies": {
+    "watchify": "~0.4.1",
+    "catw": "~0.2.0",
+    "napa": "~0.2.0",
+    "brfs": "0.0.8"
+  },
+  "dependencies": {
+    "browserify": "~2.36.1",
+    "pouchdb": "~1.0.0",
+    "underscore": "~1.5.2"
+  },
+  "napa": {
+    "angular": "angular/bower-angular",
+    "angular-route": "angular/bower-angular-route",
+    "angular-underscore": "floydsoft/angular-underscore"
+  }
+}

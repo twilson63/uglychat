@@ -1,0 +1,18 @@
+<div class="container" style="padding-top: 30px;padding-bottom:70px;">
+  <div class="pull-right"><input type="text" placeholder="nickname" ng-model="doc.nick"></div>
+  <h1>Ugly Chat</h1>
+  <ul class="list-group" >
+    <li class="list-group-item" ng-repeat="doc in docs">
+      <span class="pull-right">{{doc.posted | date:short }}</span>
+      <h4 class="list-group-item-heading">{{doc.nick}}</h4>
+      <p class="list-group-item-text">{{doc.body}}</p>
+    </li>
+  </ul>
+</div>
+<div class="navbar navbar-inverse navbar-fixed-bottom">
+  <form style="padding: 20px;" ng-submit="post(doc)">
+    <p>
+      <input class="form-control" type="text" placeholder="Post Message"  ng-model="doc.body">
+    </p>
+  </form>
+</div>
